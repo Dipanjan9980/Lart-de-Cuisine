@@ -1,0 +1,197 @@
+:root {
+    --bg-color: #fdfcf9;
+    --text-primary: #1a1a1a;
+    --text-secondary: #636e72;
+    --accent: #b2945e; /* Elegant Muted Gold */
+    --border: #e0e0e0;
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Header & Hero */
+.hero {
+    padding: 80px 20px;
+    text-align: center;
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+}
+
+.brand h1 {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: -1px;
+}
+
+.divider {
+    width: 60px;
+    height: 2px;
+    background: var(--accent);
+    margin: 15px auto;
+}
+
+.brand p {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    color: var(--text-secondary);
+}
+
+/* Layout */
+.main-wrapper {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 40px;
+}
+
+/* Menu Category Styling */
+.menu-category {
+    margin-bottom: 30px;
+}
+
+.category-header {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    padding: 20px 0;
+    border-bottom: 2px solid var(--text-primary);
+    cursor: pointer;
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.category-header::-webkit-details-marker { display: none; }
+
+/* Menu Card Design */
+.menu-card {
+    border-bottom: 1px solid var(--border);
+    padding: 25px 0;
+    transition: 0.3s ease;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 10px;
+}
+
+.item-name {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.item-price {
+    font-weight: 600;
+    color: var(--accent);
+}
+
+/* Classy "Add" Button */
+.btn-add {
+    background: transparent;
+    border: 1px solid var(--text-primary);
+    padding: 8px 20px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.4s;
+    margin-top: 15px;
+}
+
+.btn-add:hover {
+    background: var(--text-primary);
+    color: #fff;
+}
+
+/* Info Dropdown */
+.info-trigger {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    cursor: pointer;
+    list-style: none;
+}
+
+.info-content {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 10px 0;
+    padding-left: 10px;
+    border-left: 1px solid var(--accent);
+}
+
+/* Cart Column */
+.cart-sticky {
+    position: sticky;
+    top: 40px;
+    background: #fff;
+    padding: 30px;
+    border: 1px solid var(--border);
+}
+
+.cart-sticky h2 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    margin-top: 0;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 15px;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.btn-checkout {
+    width: 100%;
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 18px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+/* Cart Item List */
+.cart-items-container li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    border-bottom: 1px dotted var(--border);
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    color: #ff7675;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .main-wrapper {
+        grid-template-columns: 1fr;
+    }
+}

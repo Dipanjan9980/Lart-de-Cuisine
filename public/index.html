@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Art de Cuisine | Fine Dining</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="brand">
+            <h1>L'Art de Cuisine</h1>
+            <div class="divider"></div>
+            <p>EST. 2026 — AUTHENTIC GOURMET EXPERIENCE</p>
+        </div>
+    </header>
+
+    <div class="main-wrapper">
+        <section class="menu-column">
+            
+            <details class="menu-category" open>
+                <summary class="category-header">Artisan Pizzas</summary>
+                <div class="items-list">
+                    
+                    <div class="menu-card">
+                        <div class="card-top">
+                            <span class="item-name">Margherita di Bufala</span>
+                            <span class="item-price">$18</span>
+                        </div>
+                        <details class="info-dropdown">
+                            <summary class="info-trigger">View Details</summary>
+                            <p class="info-content">San Marzano tomatoes, buffalo mozzarella, fresh basil, and extra virgin olive oil on a 48-hour fermented crust.</p>
+                        </details>
+                        <button class="btn-add" onclick="addToCart('Margherita di Bufala', 18)">Add to Order</button>
+                    </div>
+
+                    <div class="menu-card">
+                        <div class="card-top">
+                            <span class="item-name">Tartufo Nero</span>
+                            <span class="item-price">$24</span>
+                        </div>
+                        <details class="info-dropdown">
+                            <summary class="info-trigger">View Details</summary>
+                            <p class="info-content">White base with fior di latte, black truffle carpaccio, wild mushrooms, and a hint of roasted garlic.</p>
+                        </details>
+                        <button class="btn-add" onclick="addToCart('Tartufo Nero', 24)">Add to Order</button>
+                    </div>
+
+                </div>
+            </details>
+
+            <details class="menu-category">
+                <summary class="category-header">Curated Beverages</summary>
+                <div class="items-list">
+                    <div class="menu-card">
+                        <div class="card-top">
+                            <span class="item-name">Elderflower Spritz</span>
+                            <span class="item-price">$12</span>
+                        </div>
+                        <details class="info-dropdown">
+                            <summary class="info-trigger">View Details</summary>
+                            <p class="info-content">St-Germain liqueur, dry prosecco, soda water, and a twist of lemon zest.</p>
+                        </details>
+                        <button class="btn-add" onclick="addToCart('Elderflower Spritz', 12)">Add to Order</button>
+                    </div>
+                </div>
+            </details>
+
+        </section>
+
+        <aside class="cart-column">
+            <div class="cart-sticky">
+                <h2>Reservation Summary</h2>
+                <div id="cart-list" class="cart-items-container">
+                    </div>
+                <div class="cart-footer">
+                    <div class="total-row">
+                        <span>Total Amount</span>
+                        <span id="total-price">$0.00</span>
+                    </div>
+                    <button class="btn-checkout" onclick="submitOrder()">Confirm Order</button>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
